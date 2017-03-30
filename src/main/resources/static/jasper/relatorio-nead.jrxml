@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-03-19T17:49:59 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio-nead" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b8deab26-eed0-4da9-bfb7-eafc733564cf">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<field name="logo" class="java.io.File"/>
+	<field name="imagemNead1" class="java.io.File"/>
+	<field name="imagemNead2" class="java.io.File"/>
+	<field name="data" class="java.lang.String"/>
+	<field name="profissionalNome" class="java.lang.String"/>
+	<field name="crmMedico" class="java.lang.String"/>
+	<field name="provedor" class="java.lang.String"/>
+	<field name="matricula" class="java.lang.String"/>
+	<field name="pacienteNome" class="java.lang.String"/>
+	<field name="pacienteIdade" class="java.lang.String"/>
+	<field name="pacienteDiagnostico" class="java.lang.String"/>
+	<field name="pacienteDiagnosticoSecundario" class="java.lang.String"/>
+	<field name="idade" class="java.lang.String"/>
+	<field name="dia" class="java.lang.String"/>
+	<field name="mes" class="java.lang.String"/>
+	<field name="ano" class="java.lang.String"/>
+	<field name="neadComplexidade" class="java.lang.String"/>
+	<field name="grupo1RespostaPergunta1" class="java.lang.String"/>
+	<field name="grupo1RespostaPergunta2" class="java.lang.String"/>
+	<field name="grupo1RespostaPergunta3" class="java.lang.String"/>
+	<field name="grupo2RespostaPergunta1" class="java.lang.String"/>
+	<field name="grupo2RespostaPergunta2" class="java.lang.String"/>
+	<field name="grupo2RespostaPergunta3" class="java.lang.String"/>
+	<field name="grupo2RespostaPergunta4" class="java.lang.String"/>
+	<field name="grupo3RespostaPergunta1" class="java.lang.String"/>
+	<field name="grupo3RespostaPergunta2" class="java.lang.String"/>
+	<field name="grupo3RespostaPergunta3" class="java.lang.String"/>
+	<field name="grupo3RespostaPergunta4" class="java.lang.String"/>
+	<field name="grupo3RespostaPergunta5" class="java.lang.String"/>
+	<field name="grupo3RespostaPergunta6" class="java.lang.String"/>
+	<field name="grupo3RespostaPergunta7" class="java.lang.String"/>
+	<field name="grupo3RespostaPergunta8" class="java.lang.String"/>
+	<field name="grupo3RespostaPergunta9" class="java.lang.String"/>
+	<field name="grupo3RespostaPergunta10" class="java.lang.String"/>
+	<field name="grupo3Pontuacao" class="java.lang.String"/>
+	<field name="grupo3Curativos" class="java.lang.String"/>
+	<field name="grupo3Medicacoes" class="java.lang.String"/>
+	<field name="grupo3OutrosProgramas" class="java.lang.String"/>
+	<field name="escoreKatzAtividades" class="java.lang.String"/>
+	<field name="escoreKatzBanharSe" class="java.lang.String"/>
+	<field name="escoreKatzVestirSe" class="java.lang.String"/>
+	<field name="escoreKatzIrAoBanheiro" class="java.lang.String"/>
+	<field name="escoreKatzTransferencia" class="java.lang.String"/>
+	<field name="escoreKatzContinencia" class="java.lang.String"/>
+	<field name="escoreKatzAlimentacao" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<image scaleImage="RealSize" hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="0" width="555" height="802" uuid="d0999540-39fd-40eb-aee0-952f7d89db75"/>
+				<imageExpression><![CDATA["/home/gleidson/permanente/pasta-compartilhada/nead/nead1.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="139" y="59" width="35" height="13" uuid="ff26d023-6261-428c-bcf4-c72bc797eb58"/>
+				<textFieldExpression><![CDATA[$F{mes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="115" y="59" width="35" height="13" uuid="c641d4d9-2622-48e1-8de0-f166d90c9c58"/>
+				<textFieldExpression><![CDATA[$F{dia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="161" y="59" width="35" height="13" uuid="ab216742-2483-4bd6-87ea-beab2833a1c9"/>
+				<textFieldExpression><![CDATA[$F{ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="75" width="418" height="15" uuid="97f40ac5-2ab3-4bfd-8028-ce000b7d1e6b"/>
+				<textFieldExpression><![CDATA[$F{pacienteNome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="64" y="92" width="126" height="15" uuid="0b81ccd1-6724-46aa-897c-3c2546340521"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{matricula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="236" y="91" width="64" height="16" uuid="a32cab3e-7918-49fa-9229-f2331a9ae5cf"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{idade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="91" width="169" height="16" uuid="2e5268c2-4890-431f-b2bd-15bb169d3504"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{provedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="124" y="107" width="406" height="13" uuid="3dae2cf4-a1b2-480b-bb9d-03a8df738c31"/>
+				<textFieldExpression><![CDATA[$F{pacienteDiagnostico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="125" width="396" height="13" uuid="dce91eb5-e871-4b60-b855-de8463321e96"/>
+				<textFieldExpression><![CDATA[$F{pacienteDiagnosticoSecundario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="142" width="293" height="13" uuid="d040799e-5fdc-4ac3-9c49-2cc965c5cd9f"/>
+				<textFieldExpression><![CDATA[$F{profissionalNome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="141" width="86" height="14" uuid="63038338-993d-4633-827f-e812b1fc2a36"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{crmMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="207" width="56" height="13" uuid="eb2531b8-2eba-4eea-b6b6-fe556abaee87"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo1RespostaPergunta1}.equals("SIM") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="221" width="56" height="13" uuid="e247eebb-ee86-45df-8ae3-333ac3d3c29c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo1RespostaPergunta2}.equals("SIM") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="236" width="56" height="13" uuid="2c1678e1-5db7-432d-9309-de800bab83c9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo1RespostaPergunta3}.equals("SIM") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="207" width="56" height="13" uuid="384c6484-75ee-4fbc-8248-504bd8dfb5d1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo1RespostaPergunta1}.equals("NÃO") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="222" width="56" height="13" uuid="07b4734b-815b-42e6-944c-f95bc7c77759"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo1RespostaPergunta1}.equals("NÃO") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="236" width="56" height="13" uuid="0b4ee00f-7ff7-49b5-9b43-305cf71a9457"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo1RespostaPergunta3}.equals("NÃO") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="320" width="56" height="13" uuid="93df362b-9465-4282-a1b6-62df7d232870"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo2RespostaPergunta1}.equals("Não utiliza") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="320" width="56" height="13" uuid="f531cef2-7987-4109-bb33-5590688d342b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo2RespostaPergunta1}.equals("Até 12 horas/dia") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="320" width="56" height="13" uuid="5e3b2770-ba34-42f7-93bb-ddf665fd4dfc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo2RespostaPergunta1}.equals("Por mais de 12 horas/dia") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="338" width="56" height="13" uuid="889e85e1-bd7b-437d-b176-ccacd6fe8222"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo2RespostaPergunta2}.equals("Até 5 vezes/dia") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="339" width="56" height="13" uuid="7c77ffef-2085-43d1-9fc4-f372850ca667"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo2RespostaPergunta2}.equals("Não utiliza") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="338" width="56" height="13" uuid="453ef755-a984-4e7d-9bbc-1e30e62acffc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo2RespostaPergunta2}.equals("Mais de 5 vezes/dia") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="367" width="56" height="13" uuid="02efd955-c907-483f-83aa-ebf8825c2218"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo2RespostaPergunta3}.equals("Por mais de 12 horas/dia") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="367" width="56" height="13" uuid="24b0087a-62bf-4142-b7f8-077fb881eb03"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo2RespostaPergunta3}.equals("Até 12 horas/dia") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="366" width="56" height="13" uuid="3d58c17b-4287-401c-b427-14dd516ae343"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo2RespostaPergunta3}.equals("Não utiliza") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="396" width="56" height="13" uuid="f5002daa-42bb-4d12-b397-ea4ca1eea0c9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo2RespostaPergunta4}.equals("Mais de 4 vezes/dia") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="397" width="56" height="13" uuid="d743dc32-8cd4-4653-b744-fb103c181ffd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo2RespostaPergunta4}.equals("Até 4 vezes/dia") ? "X":""]]></textFieldExpression>
+			</textField>
+			<ellipse>
+				<reportElement mode="Transparent" x="149" y="442" width="15" height="15" uuid="56e4d0d1-912a-4bfc-b932-211e331c28be">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta1}.equals("Eutrófico") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="246" y="442" width="15" height="15" uuid="42e99723-7a13-4c98-92e6-33119f7240d6">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta1}.equals("Sobrepeso/Emagrecido") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="369" y="443" width="15" height="15" uuid="728fc596-0ba7-4d42-8078-9c020e9f275b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta1}.equals("Obeso/Desnutrido") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="149" y="464" width="15" height="15" uuid="f408f5a6-0732-4a5b-9a3b-1e275a884e81">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta2}.equals("Sem Auxílio") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="245" y="464" width="15" height="15" uuid="4b8536ba-48b9-42c6-ab36-8ccd045d6882">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta2}.equals("Assistida") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="370" y="464" width="15" height="15" uuid="5584e432-6ced-4185-bb72-edf73e832c2e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta2}.equals("Gastrostomia/Jejunostomia") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="474" y="463" width="15" height="15" uuid="f92de9fc-c1f2-419d-8cbc-e84f7d554f19">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta2}.equals("Por SNG/SNE*") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="149" y="484" width="15" height="15" uuid="8336cc88-a8cd-46b8-aade-0933b18c489e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta3}.equals("Independente") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="149" y="498" width="15" height="15" uuid="1b68ed39-f1f3-40a0-832a-c4965ac2a06e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta4}.equals("0 - 1 Internação") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="149" y="519" width="15" height="15" uuid="fd97d4eb-8b7a-4959-8cac-f93a1dd28041">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta5}.equals("Ausente") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="246" y="484" width="15" height="15" uuid="ffe63154-957b-4e7f-9221-2d36fc5b90c8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta3}.equals("Dependente Parcial") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="246" y="498" width="15" height="15" uuid="e14f3792-45bd-486e-b008-0611b31fcfe7">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta4}.equals("2 - 3 Internações") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="369" y="485" width="15" height="15" uuid="406817f3-03c1-462e-9bf2-95bd2e7b07c0">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta3}.equals("Dependente Total") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="369" y="498" width="15" height="15" uuid="21541ded-9493-41bc-bcde-fcb49c01d07f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta4}.equals("> 3 Internações") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="246" y="520" width="15" height="15" uuid="2e49262f-4088-4c8a-9535-6eca2568f512">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta5}.equals("Até 5 vezes ao dia") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="369" y="519" width="15" height="15" uuid="8c884119-0e6a-414f-a64b-19adf572816c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta5}.equals("Mais de 5 vezes ao dia") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="246" y="562" width="15" height="15" uuid="de5570bf-95ca-40f4-ad77-a80215683983">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta6}.equals("Multiplas lesões com curativos simples ou única lesão com curativo complexo") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="149" y="562" width="15" height="15" isPrintInFirstWholeBand="true" uuid="35435ff0-c024-42e1-a21e-992360ef69df">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta6}.equals("Nenhuma ou lesão única com curativo simples") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="370" y="551" width="15" height="15" uuid="ea6440a6-e7f5-4cd7-a17a-7d3f2473ccb6">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta6}.equals("Multiplas lesões com curativos complexos") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="246" y="603" width="15" height="15" uuid="d83831b7-fb99-41f4-b901-6aee9aef4536">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta7}.equals("Intramuscular ou Subcutânea***") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="149" y="603" width="15" height="15" uuid="2f8fb57f-5418-44ce-8855-4770bd2e02ed">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta7}.equals("Via enteral") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="369" y="603" width="15" height="15" uuid="e198c0f9-a5dc-4beb-83bd-decd1465a903">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta7}.equals("Intravenosa até 4 vezes ao dia / Hipodermóclise") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="246" y="625" width="15" height="15" uuid="e332ad67-5a9f-4299-bc6f-881d788ec34a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta8}.equals("Intermitente") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="149" y="624" width="15" height="15" uuid="af7b5bf8-6788-46d0-bc2b-1441043cecae">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta8}.equals("Ausente") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="246" y="639" width="15" height="15" uuid="a6179f6c-41dd-45b7-9e71-ae037087f979">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta9}.equals("Intermitente") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="246" y="653" width="15" height="15" uuid="4166ce5e-b477-49dd-a746-83e5e3c81177">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta10}.equals("Confuso/Desorientado") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="149" y="639" width="15" height="15" uuid="752fe519-f676-4bf6-93a8-d10e7e45840c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta9}.equals("Ausente") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="149" y="652" width="15" height="15" uuid="1c7c1eac-c9ab-4848-9c20-2255d127439c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta10}.equals("Alerta") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="369" y="639" width="15" height="15" uuid="07537dd3-5aa9-4e99-bbb0-e3e2642b4d30">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta9}.equals("Contínuo") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement mode="Transparent" x="369" y="653" width="15" height="15" uuid="60115f9d-eef1-41ea-8a89-ffbf1d23c44c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{grupo3RespostaPergunta10}.equals("Comatoso") ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<textField>
+				<reportElement x="455" y="670" width="85" height="13" uuid="4a032e69-6ef0-443e-8da0-5d9a1b3aec2d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{grupo3Pontuacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="96" y="707" width="31" height="19" uuid="a3b44f94-12d1-40a4-a81c-f9b69e1d9a45"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{grupo3Curativos}.equals("Curativos") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="706" width="31" height="19" uuid="0a1f47e5-ffb1-4ff7-97e5-488b10a1844a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{grupo3Medicacoes}.equals("Medicações Parenterais") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="706" width="31" height="19" uuid="a638cccf-84cf-4e52-9ebb-8d3551040b33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{grupo3OutrosProgramas}.equals("Outros programas") ? "X":""]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="802">
+			<image>
+				<reportElement x="0" y="0" width="555" height="802" uuid="cea2c1f6-5b9b-467a-b203-7b7dbdf23401"/>
+				<imageExpression><![CDATA["/home/gleidson/permanente/pasta-compartilhada/nead/nead2.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="83" y="99" width="29" height="23" uuid="f361e5b5-9d64-42ef-b562-12955ba3f863"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{escoreKatzAtividades}.equals("1") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="307" y="97" width="29" height="23" uuid="46c587f8-f9b7-4f0d-89cd-88455cf8b496"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{escoreKatzAtividades}.equals("0") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="83" y="138" width="29" height="23" uuid="58c08459-c2b4-49fb-86ba-a48fa541a64d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{escoreKatzBanharSe}.equals("1") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="307" y="142" width="29" height="23" uuid="472c9219-363f-46fe-b40b-d99a0ef3bf90"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{escoreKatzBanharSe}.equals("0") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="83" y="188" width="29" height="23" uuid="9eb2155c-0f8b-478d-8129-271d2e4176a7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{escoreKatzVestirSe}.equals("1") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="83" y="230" width="29" height="23" uuid="6ac7f185-9b41-40ca-857d-1fac0b6cd728"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{escoreKatzIrAoBanheiro}.equals("1") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="232" width="29" height="23" uuid="fdff045c-0667-49f9-9079-b25e6bba8437"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{escoreKatzIrAoBanheiro}.equals("0") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="179" width="29" height="23" uuid="328dd652-98c1-40a8-a22c-41a2f5102544"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{escoreKatzVestirSe}.equals("0") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="84" y="274" width="29" height="23" uuid="bd5dd8e5-f0be-4b35-8465-c1d52777b0f4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{escoreKatzTransferencia}.equals("1") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="83" y="308" width="29" height="23" uuid="3470e0d2-71bf-43d6-bbcc-ce71255ed5cd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{escoreKatzContinencia}.equals("1") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="84" y="342" width="29" height="23" uuid="cfb35841-7db9-4dfd-b629-fb732d2a78c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{escoreKatzAlimentacao}.equals("1") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="273" width="29" height="23" uuid="dfad381f-81f6-4cd7-a4f9-3f9d9e761ff2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{escoreKatzTransferencia}.equals("0") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="341" width="29" height="23" uuid="14721073-9f19-43a9-a5ed-c94840a47ff7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{escoreKatzAlimentacao}.equals("0") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="309" width="29" height="23" uuid="ba9e05f8-f613-46be-9d73-fbb8ea65a961"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{escoreKatzContinencia}.equals("0") ? "X":""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="454" width="31" height="19" uuid="7315acac-bc47-452a-8af7-ab42ae1dce15"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{dia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="472" y="454" width="31" height="19" uuid="b3ccc3dd-3cb5-442c-b3f6-443a9cf22acd"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{mes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="505" y="454" width="31" height="19" uuid="8d9eebce-29fa-4627-9f94-70394dde4c5b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ano}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

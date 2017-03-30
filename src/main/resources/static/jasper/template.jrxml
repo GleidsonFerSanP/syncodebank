@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-03-15T20:46:43 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Evolucao" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2f6e4db4-9f8f-4ffe-9759-6e1fd142f492">
+	<property name="template.type" value="columnar"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Title" forecolor="#000000" fontName="Times New Roman" fontSize="50" isBold="false"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+a.data,
+r.acuidadeauditiva,
+r.acuidadevisual,
+r.alteracoesdafala,
+r.posicaoortostatica,
+r.sentado,
+r.estadoemocional,
+r.graudeconsciencia,
+r.grauorientacao,
+r.responde,
+r.tipoderespiracao,
+r.quantidade,
+r.seracao,
+r.tosse,
+d.paciente_id AS idpaciente,
+pa.nome as paciente
+ FROM hcc_atendimento AS a
+ LEFT JOIN hcc_relatorio AS r ON r.id = a.relatorio_id
+ LEFT JOIN hcc_demanda AS d ON d.id = a.demanda_id
+ LEFT JOIN hcc_paciente AS pa ON pa.id = d.paciente_id]]>
+	</queryString>
+	<field name="data" class="java.util.Date"/>
+	<field name="acuidadeauditiva" class="java.lang.String"/>
+	<field name="acuidadevisual" class="java.lang.String"/>
+	<field name="alteracoesdafala" class="java.lang.String"/>
+	<field name="posicaoortostatica" class="java.lang.String"/>
+	<field name="sentado" class="java.lang.String"/>
+	<field name="estadoemocional" class="java.lang.String"/>
+	<field name="graudeconsciencia" class="java.lang.String"/>
+	<field name="grauorientacao" class="java.lang.String"/>
+	<field name="responde" class="java.lang.String"/>
+	<field name="tipoderespiracao" class="java.lang.String"/>
+	<field name="quantidade" class="java.lang.String"/>
+	<field name="seracao" class="java.lang.String"/>
+	<field name="tosse" class="java.lang.String"/>
+	<field name="paciente" class="java.lang.String"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
+		<groupHeader>
+			<band height="31">
+				<frame>
+					<reportElement mode="Opaque" x="0" y="7" width="555" height="24" forecolor="#B89F7D" backcolor="#9DB1B8" uuid="d8de62c1-c7b7-4da8-8c69-000abeaa2cc0"/>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement style="SubTitle" isPrintRepeatedValues="false" x="2" y="1" width="479" height="23" forecolor="#FFFFFF" uuid="25f707ae-9ac7-48d3-b45f-b14ee85fae9a"/>
+						<textElement>
+							<font isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Grau de orientação"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="2" y="0" width="551" height="1" uuid="5e41185f-9c90-45ca-839b-e28b308c1430"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/5)]]></groupExpression>
+		<groupHeader>
+			<band height="30">
+				<image>
+					<reportElement x="4" y="2" width="15" height="15" uuid="d06229e4-191d-4789-802e-6bc2ea8656fb">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[$F{grauorientacao}.equals("ORIENTADO") ? "C:/Users/Gleidson/JaspersoftWorkspace/HomeCare/check.png" : "C:/Users/Gleidson/JaspersoftWorkspace/HomeCare/uncheck.png"]]></imageExpression>
+				</image>
+				<image>
+					<reportElement x="150" y="1" width="15" height="15" uuid="64b669aa-2870-4820-85a1-1453cc736b81">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[$F{grauorientacao}.equals("DESORIENTADO") ? "C:/Users/Gleidson/JaspersoftWorkspace/HomeCare/check.png" : "C:/Users/Gleidson/JaspersoftWorkspace/HomeCare/uncheck.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="36" y="3" width="100" height="19" uuid="97217984-b54c-45c1-b568-96ce2376eaf0"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Orientado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="178" y="2" width="100" height="19" uuid="ce0ce517-81e1-43c9-aa09-eb166305d039"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Desorientado]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Group3">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
+		<groupHeader>
+			<band height="31">
+				<frame>
+					<reportElement mode="Opaque" x="0" y="7" width="555" height="24" forecolor="#B89F7D" backcolor="#9DB1B8" uuid="d8de62c1-c7b7-4da8-8c69-000abeaa2cc0"/>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement style="SubTitle" isPrintRepeatedValues="false" x="2" y="1" width="479" height="23" forecolor="#FFFFFF" uuid="25f707ae-9ac7-48d3-b45f-b14ee85fae9a"/>
+						<textElement>
+							<font isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Estado emocional"]]></textFieldExpression>
+					</textField>
+				</frame>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<group name="Group4">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/5)]]></groupExpression>
+		<groupHeader>
+			<band height="30">
+				<image>
+					<reportElement positionType="FixRelativeToBottom" x="4" y="4" width="15" height="15" uuid="d06229e4-191d-4789-802e-6bc2ea8656fb">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[$F{estadoemocional}.equals("DEPRESSIVO") ? "C:/Users/Gleidson/JaspersoftWorkspace/HomeCare/check.png" : "C:/Users/Gleidson/JaspersoftWorkspace/HomeCare/uncheck.png"]]></imageExpression>
+				</image>
+				<image>
+					<reportElement positionType="FixRelativeToBottom" x="110" y="3" width="15" height="15" uuid="64b669aa-2870-4820-85a1-1453cc736b81">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[$F{estadoemocional}.equals("AGITADO") ? "C:/Users/Gleidson/JaspersoftWorkspace/HomeCare/check.png" : "C:/Users/Gleidson/JaspersoftWorkspace/HomeCare/uncheck.png"]]></imageExpression>
+				</image>
+				<image>
+					<reportElement positionType="FixRelativeToBottom" x="242" y="3" width="15" height="15" uuid="64b669aa-2870-4820-85a1-1453cc736b81">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[$F{estadoemocional}.equals("AGRESSIVO") ? "C:/Users/Gleidson/JaspersoftWorkspace/HomeCare/check.png" : "C:/Users/Gleidson/JaspersoftWorkspace/HomeCare/uncheck.png"]]></imageExpression>
+				</image>
+				<image>
+					<reportElement positionType="FixRelativeToBottom" x="352" y="4" width="15" height="15" uuid="64b669aa-2870-4820-85a1-1453cc736b81">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[$F{estadoemocional}.equals("APATICO") ? "C:/Users/Gleidson/JaspersoftWorkspace/HomeCare/check.png" : "C:/Users/Gleidson/JaspersoftWorkspace/HomeCare/uncheck.png"]]></imageExpression>
+				</image>
+				<image>
+					<reportElement positionType="FixRelativeToBottom" x="449" y="3" width="15" height="15" uuid="64b669aa-2870-4820-85a1-1453cc736b81">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[$F{estadoemocional}.equals("NORMAL") ? "C:/Users/Gleidson/JaspersoftWorkspace/HomeCare/check.png" : "C:/Users/Gleidson/JaspersoftWorkspace/HomeCare/uncheck.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement positionType="FixRelativeToBottom" x="36" y="4" width="64" height="19" uuid="97217984-b54c-45c1-b568-96ce2376eaf0"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Depressivo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="FixRelativeToBottom" x="141" y="4" width="92" height="19" uuid="ce0ce517-81e1-43c9-aa09-eb166305d039"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Agitado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="FixRelativeToBottom" x="271" y="3" width="72" height="19" uuid="ce0ce517-81e1-43c9-aa09-eb166305d039"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Agressivo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="FixRelativeToBottom" x="379" y="3" width="50" height="19" uuid="ce0ce517-81e1-43c9-aa09-eb166305d039"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Apático]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="FixRelativeToBottom" x="480" y="4" width="70" height="19" uuid="ce0ce517-81e1-43c9-aa09-eb166305d039"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Normal]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="240" y="10" width="315" height="40" uuid="f49d68fd-a2c7-44ec-a5fc-9300d10c85a1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Relatório de Evolução]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="240" y="50" width="313" height="32" uuid="21b9f298-4f3f-4e12-ba9e-b96b500372a4">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paciente}]]></textFieldExpression>
+			</textField>
+			<image vAlign="Middle">
+				<reportElement x="0" y="10" width="178" height="110" uuid="24bc07d9-85b7-4ad6-9039-70b1acc26c76"/>
+				<imageExpression><![CDATA["C:/Users/Gleidson/JaspersoftWorkspace/images/logo.png"]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="240" y="82" width="313" height="32" uuid="e3060b9f-bcd8-4312-80d8-175da514d4b8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="91" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="fab082df-3ca0-43ac-900e-4da3f8b5a45d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="2" y="0" width="555" height="13" forecolor="#D0B48E" backcolor="#9DB1B8" uuid="bfdca178-800d-445c-9a31-bb616a00e8ce"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="513" y="0" width="40" height="13" forecolor="#FFFFFF" uuid="2fba0f87-635e-476d-858f-d102b26146fe"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" mode="Transparent" x="433" y="0" width="80" height="13" forecolor="#FFFFFF" uuid="e454d23d-bcfc-4c79-a399-0ef520a3150a"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="0" width="197" height="13" forecolor="#FFFFFF" uuid="14d8de1e-8695-4078-a67f-0e69172574d5"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

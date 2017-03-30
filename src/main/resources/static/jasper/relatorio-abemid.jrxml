@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-03-19T14:47:36 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ee0e2745-00ef-42ce-9868-83d244ed9130">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<field name="logo" class="java.io.File"/>
+	<field name="iconUnChecked" class="java.io.File"/>
+	<field name="iconChecked" class="java.io.File"/>
+	<field name="imagemAbemid1" class="java.io.File"/>
+	<field name="imagemAbemid2" class="java.io.File"/>
+	<field name="data" class="java.lang.String"/>
+	<field name="profissionalNome" class="java.lang.String"/>
+	<field name="provedor" class="java.lang.String"/>
+	<field name="matricula" class="java.lang.String"/>
+	<field name="pacienteNome" class="java.lang.String"/>
+	<field name="pacienteIdade" class="java.lang.String"/>
+	<field name="pacienteDiagnostico" class="java.lang.String"/>
+	<field name="pacienteDiagnosticoSecundario" class="java.lang.String"/>
+	<field name="idade" class="java.lang.String"/>
+	<field name="dia" class="java.lang.String"/>
+	<field name="mes" class="java.lang.String"/>
+	<field name="ano" class="java.lang.String"/>
+	<field name="abmidComplexidade" class="java.lang.String"/>
+	<field name="abmidPDA24H" class="java.lang.String"/>
+	<field name="abmidPDA12H" class="java.lang.String"/>
+	<field name="abmidPDA06H" class="java.lang.String"/>
+	<field name="abmidRespostaPergunta1" class="java.lang.String"/>
+	<field name="abmidRespostaPergunta2" class="java.lang.String"/>
+	<field name="abmidRespostaPergunta3" class="java.lang.String"/>
+	<field name="abmidRespostaPergunta4" class="java.lang.String"/>
+	<field name="abmidRespostaPergunta5" class="java.lang.String"/>
+	<field name="abmidRespostaPergunta6" class="java.lang.String"/>
+	<field name="abmidRespostaPergunta7" class="java.lang.String"/>
+	<field name="abmidTotalDePontos" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+			<frame>
+				<reportElement x="0" y="0" width="555" height="802" uuid="e876e5c4-e944-4426-a6b3-d2d134653e4d"/>
+				<image scaleImage="RealSize" hAlign="Center" vAlign="Middle">
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="802" uuid="752621b2-74a8-4e7f-925e-d93b8de0f260">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[$F{imagemAbemid1}]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement x="370" y="84" width="153" height="16" uuid="7e1823f8-efc0-4b1d-bfa1-9a10972eb438"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidPDA24H}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="196" width="20" height="15" uuid="d38fe467-5244-40a0-818c-ce16e9bbe10b">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta1}.equals("Sonda Vesical Intermitente") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="179" width="20" height="20" uuid="7d6b82c7-bfab-484f-a991-1530555cb273"/>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta1}.equals("Sonda Vesical Permanente") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="211" width="20" height="15" uuid="d10ac927-bd52-40ea-94bb-ee8de28f1de5">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta1}.equals("Traqueostomia sem Aspiração") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="226" width="20" height="15" uuid="f56ccd18-52c6-45d7-a00b-c05a30b7fb5e">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta1}.equals("Traqueostomia com Aspiração") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="242" width="20" height="15" uuid="14ca5e50-2869-403d-a701-91fafe08b2db">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta1}.equals("Aspiração de Vias Aéreas Sup.") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="258" width="20" height="15" uuid="f756de30-6c1d-401d-8f16-1f0db3a065be">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta1}.equals("Acesso Venoso Prof. Continuo") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="273" width="20" height="15" uuid="d58d2d99-4721-4cac-97de-ef4de727aa04">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta1}.equals("Acesso Venoso Intermitente") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="289" width="20" height="15" uuid="c4a09c55-de33-4eb2-8169-6c66ab9a69cc">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta1}.equals("A. Venoso Periférico Continuo") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="303" width="20" height="15" uuid="379c8c5b-1aaa-4f8e-a489-eaec0a2740d1">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta1}.equals("Diálise Domiciliar") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="319" width="20" height="15" uuid="e0b76083-427c-465c-a3f7-0b0d55fa3a78">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta2}.equals("Oral") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="335" width="20" height="15" uuid="2f82d0e5-321d-4755-b5fd-2894d4eeb587">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta2}.equals("Sub Cutânea") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="350" width="20" height="15" uuid="13a196fb-8b65-4320-b045-a442d1b34ab9">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta2}.equals("Intra Venosa") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="366" width="20" height="15" uuid="a0a665da-d794-4f7f-a696-b0a88db1263a">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta1}.equals("Intra Tecal") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="382" width="20" height="15" uuid="61d12c97-fff2-411d-8275-f37349161429">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta3}.equals("O2 Intermitente") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="397" width="20" height="15" uuid="a15fea43-25b1-43e0-8443-5101b66868bd">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta3}.equals("O2 Contínuo") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="413" width="20" height="15" uuid="1d5de71c-6209-4a14-9db4-9dd079460795">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta3}.equals("Ventilação Mec. Intermitente") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="428" width="20" height="15" uuid="9f42a628-8ebe-486c-b4c0-a1a30bb90494">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta3}.equals("Ventilação Mecânica Contínua") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="445" width="20" height="15" uuid="6def753e-6de9-41cc-8ee9-b1406703045b">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta4}.equals("Úlcera de Pressão Grau I") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="460" width="20" height="15" uuid="78a01455-0355-49a3-81a9-fa3df5325ce5">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta4}.equals("Úlcera de Pressão Grau II") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="476" width="20" height="15" uuid="1caeccfa-5c15-4549-a9c1-5318e7298de3">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta4}.equals("Úlcera de Pressão Grau III") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="491" width="20" height="15" uuid="a91fc8b8-afde-4586-b691-98c61f4cbff0">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta4}.equals("Úlcera de Pressão Grau IV") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="507" width="20" height="15" uuid="0ef277a5-fd52-4895-a51d-cf01aaaa6696">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta5}.equals("Independente") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="523" width="20" height="15" uuid="071e4872-edfb-45d7-9ee0-9ea797dfa870">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta5}.equals("Semi-Dependente") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="538" width="20" height="15" uuid="ce5ddc6a-9e6d-4b9e-9838-f82f88199123">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta5}.equals("Dependente Total") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="554" width="20" height="15" uuid="ce429208-d6d2-4f73-b217-a0675b991b1f">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta6}.equals("Independente") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="568" width="20" height="15" uuid="0be002df-6cf3-4b78-bd17-64ea23d82cff">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta6}.equals("Dependente") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="585" width="20" height="15" uuid="8db85609-4b89-4c7e-a066-3ddfb5556861">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta7}.equals("Suplementação Oral") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="600" width="20" height="15" uuid="6fe7c4e0-080b-4e03-bc7e-fa6b110a48c2">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta7}.equals("Gastrostomia") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="616" width="20" height="15" uuid="69f5de80-9361-4d27-9f77-f25c85e0dee0">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta7}.equals("SNE") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="632" width="20" height="15" uuid="f5e2fcf3-19fd-4729-97eb-ec8dd819e5ce">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta7}.equals("Jejuno lleo") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="458" y="647" width="20" height="15" uuid="13484cae-5992-4201-9e60-e6b96746ebf5">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidRespostaPergunta7}.equals("Nutrição Parenteral Total") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="511" y="659" width="20" height="15" uuid="b37ba866-9d09-4772-bd7d-2073346e2a55">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidTotalDePontos}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="370" y="99" width="153" height="16" uuid="bbf67164-2fa6-4e0a-847d-8ecb9da14f4e"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidPDA12H}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="370" y="115" width="153" height="16" uuid="c7283ea6-689e-47ac-adc8-522580414e27"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidPDA06H}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="87" y="69" width="273" height="16" uuid="bc2e8002-1b90-4539-aa03-b311764b48a3"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pacienteNome}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="70" y="100" width="121" height="16" uuid="3103ce8a-3105-40db-8895-d96833cebd0b"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{provedor}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="60" y="115" width="131" height="16" uuid="34419c54-8b0a-4427-9c24-780ab5d39772"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{matricula}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="44" y="83" width="147" height="16" uuid="d0f65fe1-2b97-4128-8360-63a8f7e8886d"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{idade}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="100" y="131" width="424" height="16" uuid="ebad18a6-a64d-4f0a-8877-6aa678e8928b"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pacienteDiagnostico}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="110" y="147" width="418" height="16" uuid="28113835-1ec7-42fd-9d94-9f57da452038"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pacienteDiagnosticoSecundario}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="10" y="10" width="50" height="56" forecolor="#FCFCFC" uuid="2c7b91a0-f334-4edf-83bf-83166ed81a52">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+				</rectangle>
+				<image>
+					<reportElement x="11" y="21" width="50" height="50" uuid="86f2da59-f5e8-422f-adfc-896aa3aca0e2"/>
+					<imageExpression><![CDATA[$F{logo}]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement x="420" y="69" width="135" height="17" uuid="a0f08012-4976-4848-81e4-b6e64aed1d3d"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abmidComplexidade}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="452" y="774" width="79" height="16" uuid="df985601-f7e3-4ee3-ba00-446c545839f9"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="279" y="51" width="22" height="18" uuid="b71e3154-58b0-48b2-85f4-8a61cec1a381"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dia}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="301" y="51" width="22" height="18" uuid="0d8fc88f-3f74-437c-b639-94c1a273b29b"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{mes}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="322" y="50" width="40" height="18" uuid="4a2003f9-d3c3-4560-b41c-98c7f089edb1"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ano}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="790" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="790" uuid="6ad2e7a6-5165-48c2-b85e-2415b3b0a899"/>
+				<imageExpression><![CDATA[$F{imagemAbemid2}]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="10" y="8" width="50" height="67" forecolor="#FCFCFC" uuid="3cb31fd0-8688-4cfe-a5d2-b06509c4ce88">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</rectangle>
+			<image>
+				<reportElement x="12" y="30" width="50" height="50" uuid="fb3a52b3-b81b-4c74-b031-b2fe2bb08233"/>
+				<imageExpression><![CDATA[$F{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="283" y="60" width="30" height="28" uuid="1fc0f795-3e49-409d-afe1-a37d977b6deb"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="60" width="30" height="28" uuid="3d160fa4-d78b-49b1-8748-655392ca42b4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="60" width="30" height="28" uuid="86e180ce-e3cb-47b3-bde9-122e58a21c19"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ano}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
