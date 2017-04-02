@@ -35,7 +35,7 @@ public class LoginResource {
 	@Qualifier(value = "contaLoginValidator")
 	private IValidator validator;
 	
-	@RequestMapping(value="/conta",method = RequestMethod.POST)
+	@RequestMapping(value="/cliente",method = RequestMethod.POST)
 	@ResponseBody
 	public ResponseEntity<?> loginConta(@RequestBody Conta conta){
 		

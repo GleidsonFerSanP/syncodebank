@@ -61,7 +61,7 @@ public class DateUtils {
 		return c.getTime();
 	}
 
-	public static Date converterDataHora(String dataString, String pattern) {
+	public static Date convertStringToDate(String dataString, String pattern) {
 		if (dataString == null || dataString.length() == 0)
 			return null;
 

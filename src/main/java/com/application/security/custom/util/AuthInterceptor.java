@@ -23,7 +23,7 @@ public class AuthInterceptor implements HandlerInterceptor {
 
 			Long id = new Long(tokenService.getIdInToken(token));
 
-			httpServletRequest.setAttribute("idProfissional", id);
+			httpServletRequest.setAttribute("idConta", id);
 
 		}
 

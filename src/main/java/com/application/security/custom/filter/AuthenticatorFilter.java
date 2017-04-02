@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import com.application.security.custom.provider.ICustomAuthenticatorProvider;
 import com.application.security.custom.util.TokenService;
@@ -19,8 +20,13 @@ import com.extra.properties.MSGProperties;
 
 public class AuthenticatorFilter implements Filter {
 
-//	@Autowired
-//	private ICustomAuthenticatorProvider provider;
+	@Autowired
+	@Qualifier(value = "contaAuthenticatorProvider")
+	private ICustomAuthenticatorProvider contaAuthenticatorProvider;
+
+	@Autowired
+	@Qualifier(value = "usuarioAuthenticatorProvider")
+	private ICustomAuthenticatorProvider usuarioAuthenticatorProvider;
 	
 	@Autowired
 	private TokenService tokenService;
@@ -39,14 +45,17 @@ public class AuthenticatorFilter implements Filter {
 		
 		String uri = httpRequest.getRequestURI();
 		
+		if(uri.contains("/login/cliente"))
+			c.doFilter(httpRequest, response);
+		
 		token = tokenService.getTokenInRequest(httpRequest);
 		
-		if (!uri.contains("/rest/mobile/"))
-			c.doFilter(httpRequest, response);
-//		else if (provider.checkIfAuthenticate(token))
-//			c.doFilter(httpRequest, response);
-		else
-			httpResponse.setStatus(401, MSGProperties.loginNaoRealizado);
+		if(!uri.contains("/login/cliente"))
+			if (contaAuthenticatorProvider.checkIfAuthenticate(token))
+				c.doFilter(httpRequest, response);
+			else
+				httpResponse.setStatus(401, MSGProperties.loginNaoRealizado);
+		
 	}
 
 }

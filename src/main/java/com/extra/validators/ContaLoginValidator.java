@@ -1,6 +1,7 @@
 package com.extra.validators;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import com.domain.model.conta.Agencia;
@@ -13,6 +14,7 @@ import com.extra.exceptions.ObjectNotFoundException;
 import com.extra.properties.MSGProperties;
 
 @Component("contaLoginValidator")
+@EnableConfigurationProperties({MSGProperties.class})
 public class ContaLoginValidator implements IValidator{
 	
 	@Autowired

@@ -25,6 +25,18 @@ public class Agencia implements Serializable{
 	@Column(nullable = false)
 	private Integer numero;
 
+	public Agencia() {
+	}
+
+	public Agencia(Long id) {
+		this.id = id;
+	}
+
+	public Agencia(String nome, Integer numero) {
+		this.nome = nome;
+		this.numero = numero;
+	}
+
 	public Long getId() {
 		return id;
 	}

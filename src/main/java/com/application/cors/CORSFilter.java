@@ -44,8 +44,8 @@ public class CORSFilter implements Filter {
 			//response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
 
 			// Access-Control-Allow-Headers
-			/*response.setHeader("Access-Control-Allow-Headers",
-				"Origin, X-Requested-With, Content-Type, Accept, " + CSRF.REQUEST_HEADER_NAME);*/
+			response.setHeader("Access-Control-Allow-Headers",
+				"Origin, X-Requested-With, Content-Type, Accept, Authorization");
 		}
 
 		chain.doFilter(req, res);

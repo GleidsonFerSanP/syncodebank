@@ -12,11 +12,11 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-import com.extra.validators.EmailValidator;
+import com.extra.validators.CpfValidator;
 
 @Target({ TYPE, FIELD, ANNOTATION_TYPE })
 @Retention(RUNTIME)
-@Constraint(validatedBy = EmailValidator.class)
+@Constraint(validatedBy = CpfValidator.class)
 @Documented
 public @interface ValidCpf {
 

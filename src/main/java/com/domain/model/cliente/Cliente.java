@@ -37,8 +37,8 @@ public class Cliente implements Serializable{
 	private String cpf;
 	
 	@Column(length = 100, unique = true, nullable = false)
-	@NotEmpty(message = "O email não pode ser vazio")
 	@ValidEmail(message = "O email inserido é inválido")
+	@NotEmpty(message = "O email não pode ser vazio")
 	private String email;
 
 	@Column(length = 20)
@@ -50,9 +50,6 @@ public class Cliente implements Serializable{
 	private Date dataDeCadastro = new Date();
 	
 	private Date dataDeNascimento;
-
-	@Column(nullable = false)
-	private String senha;
 
 	public Cliente(Long id) {
 		this.id = id;
@@ -123,14 +120,6 @@ public class Cliente implements Serializable{
 
 	public void setDataDeNascimento(Date dataDeNascimento) {
 		this.dataDeNascimento = dataDeNascimento;
-	}
-
-	public String getSenha() {
-		return senha;
-	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
 	}
 
 	@Override

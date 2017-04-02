@@ -2,7 +2,9 @@ package com.domain.model.conta;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,10 +13,16 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
+import org.hibernate.annotations.Proxy;
+
 import com.application.security.custom.model.ICredential;
 import com.domain.model.cliente.Cliente;
+import com.extra.security.PasswordBase64;
+import com.extra.util.StringUteis;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
+@Proxy(lazy = false)
 public class Conta implements ICredential, Serializable{
 	
 	private static final long serialVersionUID = 1L;
@@ -24,22 +32,29 @@ public class Conta implements ICredential, Serializable{
 	@SequenceGenerator(name="conta_seq",sequenceName="conta_sequence",allocationSize=1)
 	private Long id;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private Agencia agencia;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private Cliente cliente;
 
 	@Column(nullable = false)
 	private Integer numero;
+
+	@Column(nullable = false)
+	private Integer digito;
 	
 	private BigDecimal saldo = new BigDecimal("0.0");
 	
+	@JsonIgnore
 	@Column(nullable = false, length = 1024)
 	private String senha;
 	
+	@JsonIgnore
 	@Column(length = 1024)
 	private String token;
+	
+	private Date dataAbertura = new Date();
 	
 	public Conta() {
 	}
@@ -89,11 +104,13 @@ public class Conta implements ICredential, Serializable{
 	}
 
 	public String getSenha() {
-		return senha;
+		return StringUteis.isNullOrEmpty(this.senha) ? null:PasswordBase64.decode(this.senha);
 	}
 
 	public void setSenha(String senha) {
-		this.senha = senha;
+		if(StringUteis.isNullOrEmpty(senha))
+			return;
+		this.senha = PasswordBase64.encode(senha);;
 	}
 
 	public String getToken() {
@@ -102,6 +119,22 @@ public class Conta implements ICredential, Serializable{
 
 	public void setToken(String token) {
 		this.token = token;
+	}
+
+	public Integer getDigito() {
+		return digito;
+	}
+
+	public void setDigito(Integer digito) {
+		this.digito = digito;
+	}
+
+	public Date getDataAbertura() {
+		return dataAbertura;
+	}
+
+	public void setDataAbertura(Date dataAbertura) {
+		this.dataAbertura = dataAbertura;
 	}
 
 	@Override
@@ -136,11 +169,13 @@ public class Conta implements ICredential, Serializable{
 	}
 
 	@Override
+	@JsonIgnore
 	public String getLogin() {
 		return this.agencia.getNumero()+"-"+this.numero;
 	}
 
 	@Override
+	@JsonIgnore
 	public String getPassword() {
 		return this.senha;
 	}

@@ -42,5 +42,9 @@ public class ClienteBuilder {
 		this.instance.setDataDeNascimento(dataDeNascimento);
 		return this;
 	}
+	
+	public Cliente build(){
+		return this.instance;
+	}
 
 }

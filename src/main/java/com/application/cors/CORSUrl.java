@@ -12,6 +12,7 @@ public class CORSUrl implements Serializable{
 	public static List<String> getUrls(){
 		urls.add("http://localhost:8080");
 		urls.add("http://192.168.25.56/");
+		urls.add("http://localhost:3000");
 		return urls;
 	}
 
