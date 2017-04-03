@@ -28,6 +28,8 @@ public class ContaLoginValidator implements IValidator{
 		
 		Conta conta = (Conta) obj;
 		
+		conta.setSenha(conta.getLoginPassword());
+		
 		if(conta.getAgencia() == null)
 			throw new FieldNullOrEmptyException(MSGProperties.agenciaVazia);
 
@@ -41,6 +43,9 @@ public class ContaLoginValidator implements IValidator{
 		
 		if(conta.getNumero() == null)
 			throw new FieldNullOrEmptyException(MSGProperties.contaNumeroVazio);
+
+		if(conta.getDigito() == null)
+			throw new FieldNullOrEmptyException(MSGProperties.contaDigitoVazio);
 		
 		Conta contaAux = contaRepository.findByNumero(conta.getNumero());
 		

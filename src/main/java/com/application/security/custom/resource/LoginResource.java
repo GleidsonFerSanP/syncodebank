@@ -17,6 +17,7 @@ import com.domain.model.usuario.Usuario;
 import com.extra.exceptions.FieldNullOrEmptyException;
 import com.extra.exceptions.InvalidOldPasswordException;
 import com.extra.exceptions.ObjectNotFoundException;
+import com.extra.exceptions.PreconditionFailedException;
 import com.extra.validators.IValidator;
 
 @RestController
@@ -48,6 +49,8 @@ public class LoginResource {
 			return ResponseEntity.status(HttpStatus.PRECONDITION_REQUIRED).body(e);
 		} catch (InvalidOldPasswordException e) {
 			return ResponseEntity.status(HttpStatus.PRECONDITION_FAILED).body(e);
+		} catch (PreconditionFailedException e) {
+			return ResponseEntity.status(HttpStatus.PRECONDITION_FAILED).body(e);
 		}
 		
 	}
@@ -64,6 +67,8 @@ public class LoginResource {
 		} catch (FieldNullOrEmptyException e) {
 			return ResponseEntity.status(HttpStatus.PRECONDITION_REQUIRED).body(e);
 		} catch (InvalidOldPasswordException e) {
+			return ResponseEntity.status(HttpStatus.PRECONDITION_FAILED).body(e);
+		} catch (PreconditionFailedException e) {
 			return ResponseEntity.status(HttpStatus.PRECONDITION_FAILED).body(e);
 		}
 		

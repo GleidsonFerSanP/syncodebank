@@ -7,11 +7,13 @@ import java.util.Date;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Transient;
 
 import org.hibernate.annotations.Proxy;
 
@@ -35,7 +37,8 @@ public class Conta implements ICredential, Serializable{
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Agencia agencia;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@JsonIgnore
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Cliente cliente;
 
 	@Column(nullable = false)
@@ -55,6 +58,9 @@ public class Conta implements ICredential, Serializable{
 	private String token;
 	
 	private Date dataAbertura = new Date();
+	
+	@Transient
+	private String loginPassword;
 	
 	public Conta() {
 	}
@@ -135,6 +141,14 @@ public class Conta implements ICredential, Serializable{
 
 	public void setDataAbertura(Date dataAbertura) {
 		this.dataAbertura = dataAbertura;
+	}
+
+	public String getLoginPassword() {
+		return loginPassword;
+	}
+
+	public void setLoginPassword(String loginPassword) {
+		this.loginPassword = loginPassword;
 	}
 
 	@Override

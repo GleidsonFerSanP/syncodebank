@@ -58,6 +58,26 @@ public class MSGProperties {
 	public static String contaNaoExiste;
 	@NotBlank
 	public static String contaSenhaNaoConfere;
+	@NotBlank
+	public static String contaDigitoVazio;
+	@NotBlank
+	public static String enderecoVazio;
+	@NotBlank
+	public static String enderecoLogradouroVazio;
+	@NotBlank
+	public static String enderecoNumeroVazio;
+	@NotBlank
+	public static String enderecoComplementoVazio;
+	@NotBlank
+	public static String enderecoBairroVazio;
+	@NotBlank
+	public static String enderecoCidadeVazio;
+	@NotBlank
+	public static String enderecoEstadoVazio;
+	@NotBlank
+	public static String valorVazio;
+	@NotBlank
+	public static String valorDaTransacaoMaiorQueOSaldo;
 	
 	public static void setLoginNaoRealizado(String loginNaoRealizado) {
 		MSGProperties.loginNaoRealizado = loginNaoRealizado;
@@ -137,4 +157,35 @@ public class MSGProperties {
 	public static void setSenhasDiferentes(String senhasDiferentes) {
 		MSGProperties.senhasDiferentes = senhasDiferentes;
 	}
+	public static void setContaDigitoVazio(String contaDigitoVazio) {
+		MSGProperties.contaDigitoVazio = contaDigitoVazio;
+	}
+	public static void setEnderecoVazio(String enderecoVazio) {
+		MSGProperties.enderecoVazio = enderecoVazio;
+	}
+	public static void setEnderecoLogradouroVazio(String enderecoLogradouroVazio) {
+		MSGProperties.enderecoLogradouroVazio = enderecoLogradouroVazio;
+	}
+	public static void setEnderecoNumeroVazio(String enderecoNumeroVazio) {
+		MSGProperties.enderecoNumeroVazio = enderecoNumeroVazio;
+	}
+	public static void setEnderecoComplementoVazio(String enderecoComplementoVazio) {
+		MSGProperties.enderecoComplementoVazio = enderecoComplementoVazio;
+	}
+	public static void setEnderecoBairroVazio(String enderecoBairroVazio) {
+		MSGProperties.enderecoBairroVazio = enderecoBairroVazio;
+	}
+	public static void setEnderecoCidadeVazio(String enderecoCidadeVazio) {
+		MSGProperties.enderecoCidadeVazio = enderecoCidadeVazio;
+	}
+	public static void setEnderecoEstadoVazio(String enderecoEstadoVazio) {
+		MSGProperties.enderecoEstadoVazio = enderecoEstadoVazio;
+	}
+	public static void setValorVazio(String valorVazio) {
+		MSGProperties.valorVazio = valorVazio;
+	}
+	public static void setValorDaTransacaoMaiorQueOSaldo(String valorDaTransacaoMaiorQueOSaldo) {
+		MSGProperties.valorDaTransacaoMaiorQueOSaldo = valorDaTransacaoMaiorQueOSaldo;
+	}
+	
 }
