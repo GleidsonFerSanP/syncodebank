@@ -6,13 +6,11 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import com.github.ulisesbocchio.jar.resources.JarResourceLoader;
 
 @SpringBootApplication
-public class AdminApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(AdminApplication.class, args);
-		
 		new SpringApplicationBuilder()
-        .sources(AdminApplication.class)
+        .sources(Application.class)
         .resourceLoader(new JarResourceLoader())
         .run(args);
 	}

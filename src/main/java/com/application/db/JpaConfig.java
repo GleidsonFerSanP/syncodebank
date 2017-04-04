@@ -27,7 +27,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 @Configuration
 @EnableCaching
-@PropertySource("classpath:postgres.properties")
+@PropertySource("classpath:h2.properties")
 @EnableJpaRepositories(
 		basePackages = "com", 
 		entityManagerFactoryRef = "entityManager", 
@@ -37,7 +37,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 public class JpaConfig {
 	@Autowired
 	private Environment env;
-
 
 	@Primary
 	@Bean
@@ -55,8 +54,8 @@ public class JpaConfig {
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		em.setJpaVendorAdapter(vendorAdapter);
 		HashMap<String, Object> properties = new HashMap<String, Object>();
-		properties.put("hibernate.hbm2ddl.auto", env.getProperty("postgres.hibernate.hbm2ddl.auto"));
-		properties.put("hibernate.dialect", env.getProperty("postgres.hibernate.dialect"));
+		properties.put("hibernate.hbm2ddl.auto", env.getProperty("h2.hibernate.hbm2ddl.auto"));
+		properties.put("hibernate.dialect", env.getProperty("h2.hibernate.dialect"));
 		em.setJpaPropertyMap(properties);
 
 		return em;
@@ -66,10 +65,10 @@ public class JpaConfig {
 	@Bean
 	public DataSource ilionDataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName(env.getProperty("postgres.jdbc.driverClassName"));
-		dataSource.setUrl(env.getProperty("postgres.jdbc.url"));
-		dataSource.setUsername(env.getProperty("postgres.jdbc.user"));
-		dataSource.setPassword(env.getProperty("postgres.jdbc.pass"));
+		dataSource.setDriverClassName(env.getProperty("h2.jdbc.driverClassName"));
+		dataSource.setUrl(env.getProperty("h2.jdbc.url"));
+		dataSource.setUsername(env.getProperty("h2.jdbc.user"));
+		dataSource.setPassword(env.getProperty("h2.jdbc.pass"));
 
 
 		return dataSource;
